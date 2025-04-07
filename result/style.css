@@ -1,0 +1,51 @@
+
+*{
+    margin: 0%;
+    padding: 0%;
+  }
+      body{
+  
+      
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+         }
+  
+      main{ 
+        margin-top: 78px;
+  border-radius: 15px;
+  width: 53%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.15);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  
+  }
+  
+  .nav-buttons button{
+    color: rgb(250, 245, 245);
+  }
+  
+  @media (max-width: 480px) {
+             
+    main {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 70px;
+      font-size: 2px;
+      }
+
+  }
+
+  @media (max-width: 360px) {
+    main {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 70px;
+      font-size: 2px;
+      }
+    }

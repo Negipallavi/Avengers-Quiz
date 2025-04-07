@@ -1,0 +1,295 @@
+@font-face {
+  font-family: myFont;
+  src: url(Avengeance-YolO.ttf);
+}
+
+
+*{
+font-family: myFont;
+word-spacing: 6px;
+letter-spacing: 1.8px;
+}
+
+body {
+
+margin: 0;
+padding: 0;
+min-height: 100vh;
+font-size: 10px;
+background-image: url('avangers.jpg');
+background-repeat: no-repeat;
+color: rgb(12, 12, 12);
+font-weight: bolder;
+background-size: 100% 100%;
+background-attachment: fixed;
+
+
+}
+
+/* From Uiverse.io by Nawsome */ 
+.svg-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0c0c0c;
+}
+
+.svg-frame svg {
+  position: absolute;
+  transition: .5s;
+  z-index: calc(1 - (0.2 * var(--j)));
+  transform-origin: center;
+  width: 100%;
+  height: 100%;
+  fill: none;
+}
+
+.svg-frame:hover svg {
+  transform: rotate(-80deg) skew(30deg) translateX(calc(45px * var(--i))) translateY(calc(-35px * var(--i)));
+}
+
+.svg-frame svg #center {
+  transition: .5s;
+  transform-origin: center;
+}
+
+.svg-frame:hover svg #center {
+  transform: rotate(-30deg) translateX(45px) translateY(-3px);
+}
+
+#out2 {
+  animation: rotate16 7s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+#out3 {
+  animation: rotate16 3s ease-in-out infinite alternate;
+  transform-origin: center;
+  stroke: #ff0;
+}
+
+#inner3,
+#inner1 {
+  animation: rotate16 4s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+#center1 {
+  fill: #ff0;
+  animation: rotate16 2s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+@keyframes rotate16 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+header{
+display: flex;
+align-items: center;
+justify-content: center;
+height: 11vh;
+background: rgba(255,255,255,0.15);
+-webkit-backdrop-filter: blur(2px);
+backdrop-filter: blur(2px);
+border: 1px solid rgba(255,255,255,0.075);
+}
+
+main{
+display: flex;
+align-items: center;
+justify-content: center;
+height: 86vh;
+
+}
+
+
+form {
+padding: 20px;
+border-radius: 10px;
+width: 70%;
+max-width: 890px;
+text-align: center;
+border-radius: 20px;
+background: rgba(255,255,255,0.15);
+-webkit-backdrop-filter: blur(3px);
+backdrop-filter: blur(3px);
+border: 1px solid rgba(255,255,255,0.075);
+height: 460px;
+}
+
+fieldset,legend{
+border: none;
+padding-top: 20.5px;
+font-size: 30px;
+}
+
+
+.question {
+
+text-align: left;
+display: none;
+margin: 20px 0;
+}
+
+.question.active {
+display: block;
+}
+
+.answers label {
+display: flex;
+align-items: center;
+font-size: 24px; 
+cursor: pointer;
+margin: 15px 0;
+}
+
+.answers input[type="radio"] {
+width: 12px; 
+height: 12px;
+margin-right: 10px; 
+transform: scale(1.5); 
+}
+
+.radio-input {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.radio-input * {
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+
+.radio-input label {
+display: flex;
+align-items: center;
+gap: 15px;
+padding: 0px 20px;
+width: 220px;
+cursor: pointer;
+height: 50px;
+position: relative;
+}
+
+.radio-input label::before {
+position: absolute;
+content: "";
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 240px;
+height: 55px;
+z-index: -1;
+transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+border-radius: 10px;
+border: 2px solid transparent;
+}
+
+.radio-input label:hover::before {
+background: rgba(255,255,255,0.15);
+-webkit-backdrop-filter: blur(2px);
+backdrop-filter: blur(2px);
+border: 1px solid rgba(255,255,255,0.075);
+}
+
+.radio-input .label:has(input:checked)::before {
+background-color: #2d3750;
+border-color: #435dd8;
+height: 55px;
+}
+.radio-input .label .text {
+color: #fff;
+}
+
+.radio-input .label input[type="radio"] {
+background-color: #202030;
+appearance: none;
+width: 9px;
+height: 9px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.radio-input .label input[type="radio"]:checked {
+background-color: #95aae9;
+-webkit-animation: puls 0.7s forwards;
+animation: pulse 0.7s forwards;
+}
+
+.radio-input .label input[type="radio"]:before {
+width: 6px;
+height: 6px;
+border-radius: 50%;
+transition: all 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+background-color: #fff;
+transform: scale(0);
+}
+
+.radio-input .label input[type="radio"]:checked::before {
+transform: scale(1);
+}
+
+@keyframes pulse {
+0% {
+box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+}
+70% {
+box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
+}
+100% {
+box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+}
+}
+
+.nav-buttons button {
+  transition: transform 0.3s ease;
+}
+
+
+.nav-buttons {
+margin-top: 40px;
+}
+
+.nav-buttons button {
+margin: 0px;
+padding: 10px;
+font-size: 1.3rem;
+border: 3px solid white;
+background-color: #2f355e;
+color: rgb(250, 246, 246);
+cursor: pointer;
+border-radius: 9px;
+width: 35%;
+}
+
+#result {
+display: none;
+font-size: 1.8rem;
+color: #0c0c0c;
+padding-top: 150px;
+border-radius: 10px;
+text-align: center;
+align-items: center;   
+}
+
+
+@media (max-width: 480px) {
+
+
+  main{
+    font-size: 1px;
+  }
+
+  
+
+}
